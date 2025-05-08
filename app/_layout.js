@@ -10,14 +10,14 @@ export default function Layout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: "#e30613" }, // Cor vermelha da paleta (Pantone 485)
-        headerTintColor: "#fff", // Cor do texto no cabeçalho (branco)
+        headerStyle: { backgroundColor: "#148e13" }, // Cor vermelha da paleta (Pantone 485)
+        headerTintColor: "#094008", // Cor do texto no cabeçalho (branco)
       }}
     >
       <Stack.Screen
         name="index"
         options={{
-          title: "📝 TaskMaster",
+          title: "📞 MyContacts",
           headerRight: () => (
             <Pressable
               onPress={() => router.push("/settings")} // Navegação para a tela de configurações

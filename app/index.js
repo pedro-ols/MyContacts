@@ -96,7 +96,7 @@ export default function HomeScreen() {
           </View>
         )}
         ListEmptyComponent={
-          <Text style={styles.emptyText}>Nenhuma tarefa ainda!</Text>
+          <Text style={styles.emptyText}>Nenhum Contato ainda!</Text>
         }
       />
 
@@ -111,13 +111,13 @@ export default function HomeScreen() {
           <View style={styles.modalContent}>
             <Text style={{ marginBottom: 8 }}>
               {editIndex === null
-                ? "Digite sua nova tarefa:"
-                : "Edite a tarefa:"}
+                ? "Digite seu novo contato:"
+                : "Edite o contato:"}
             </Text>
             <TextInput
               value={newTask} // O valor do campo de texto é controlado pelo estado `newTask`
               onChangeText={setNewTask} // Atualiza o estado com o novo texto
-              placeholder="Ex: Estudar Hooks"
+              placeholder="Ex: (19) 99999-9999"
               style={styles.input}
             />
             <Pressable onPress={addOrEditTask} style={{ marginBottom: 8 }}>
@@ -141,16 +141,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+    backgroundColor: "#a4c9a3"
   },
   addButton: {
     marginBottom: 16,
     alignSelf: "center",
-    backgroundColor: "#e30613", // Vermelho (Pantone 485)
+    backgroundColor: "#148e13", // Vermelho (Pantone 485)
     padding: 12,
     borderRadius: 8,
   },
   addButtonText: {
-    color: "#fff",
+    color: "#dddddd",
     fontSize: 16,
   },
   taskItemContainer: {
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 10,
     padding: 12,
-    backgroundColor: "#f1f1f1",
+    backgroundColor: "#148e13",
     borderRadius: 6,
   },
   taskItem: {
@@ -175,10 +176,10 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   editButton: {
-    backgroundColor: "#ffca28", // Cor de edição (amarelo)
+    backgroundColor: "#094008", // Cor de edição (amarelo)
   },
   deleteButton: {
-    backgroundColor: "#f44336", // Cor de exclusão (vermelho)
+    backgroundColor: "#094008", // Cor de exclusão (vermelho)
   },
   buttonText: {
     color: "#fff",
