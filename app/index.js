@@ -97,10 +97,20 @@ export default function HomeScreen() {
         keyExtractor={(_, i) => String(i)} // Identificador único para cada item
         renderItem={({ item, index }) => (
           <View style={styles.contactItemContainer}>
-            <Avatar.Text size={50} label={item.name.slice(0,1)} />
+            <Avatar.Text size={50} label={item.image || item.name.slice(0,1)} />
             <View style={styles.contactTextContainer}>
               <Text style={styles.contactItem}>{item.name}</Text>
-              <Text style={styles.contactItem}>{item.number}</Text>
+              <Text style={styles.contactItem}>
+                {
+                  item.number.length > 10
+                    ? `(${item.number.slice(0, 2)}) ${item.number.slice(
+                        2,
+                        7
+                      )}-${item.number.slice(7, 11)}`
+                    : `Numerinho pequeno`
+
+                }
+                </Text>
             </View>
             <View style={styles.contactButtons}>
               {/* Botões para editar e excluir */}
